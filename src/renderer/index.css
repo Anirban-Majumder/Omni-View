@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-color: black;
+    color: rgb(255, 104, 104); /* This sets the text color to red */
+}
