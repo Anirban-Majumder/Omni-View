@@ -8,8 +8,21 @@ import { FusesPlugin } from '@electron-forge/plugin-fuses';
 import { FuseV1Options, FuseVersion } from '@electron/fuses';
 
 const config: ForgeConfig = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'anirbanmajumder0',
+          name: 'Omni-View'
+        },
+        prerelease: true
+      }
+    }
+  ],
   packagerConfig: {
     asar: true,
+    icon: 'assets/icon',
   },
   rebuildConfig: {},
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']), new MakerRpm({}), new MakerDeb({})],
